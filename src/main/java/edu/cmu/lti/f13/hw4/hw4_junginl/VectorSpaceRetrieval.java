@@ -47,7 +47,7 @@ public class VectorSpaceRetrieval {
 	   if (descUrl == null) {
 	      throw new IllegalArgumentException("Error opening VectorSpaceRetrieval.xml");
 	   }
-		// create AnalysisEngine		
+		// create AnalysisEngine.		
 		XMLInputSource input = new XMLInputSource(descUrl);
 		AnalysisEngineDescription desc = UIMAFramework.getXMLParser().parseAnalysisEngineDescription(input);
 		AnalysisEngine anAnalysisEngine = UIMAFramework.produceAnalysisEngine(desc);
