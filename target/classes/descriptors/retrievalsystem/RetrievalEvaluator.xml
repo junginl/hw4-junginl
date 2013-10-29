@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>true</primitive>
   <annotatorImplementationName>edu.cmu.lti.f13.hw4.hw4_junginl.casconsumers.RetrievalEvaluator</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>RetrievalEvaluator</name>
-    <description/>
+    <description>Computes cosine similarity and MRR.</description>
     <version>1.0</version>
-    <vendor/>
-     <configurationParameters>
-      
-   </configurationParameters>
-    <configurationParameterSettings>
-      
-    </configurationParameterSettings>
+    <vendor>CMU</vendor>
+     <configurationParameters/>
+    <configurationParameterSettings/>
     <typeSystemDescription>
       <imports>            
         <import location="../typesystems/VectorSpaceTypes.xml"/>
@@ -23,7 +20,13 @@
     <fsIndexCollection/>
     <capabilities>
       <capability>
-        <inputs/>
+        <inputs>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.f13.hw4.hw4_junginl.typesystems.Token</type>
+          <type allAnnotatorFeatures="true">uima.tcas.DocumentAnnotation</type>
+          <type allAnnotatorFeatures="true">edu.cmu.lti.f13.hw4.hw4_junginl.typesystems.Document</type>
+          <type allAnnotatorFeatures="true">uima.cas.AnnotationBase</type>
+          <type allAnnotatorFeatures="true">uima.tcas.Annotation</type>
+        </inputs>
         <outputs/>
         <languagesSupported/>
       </capability>

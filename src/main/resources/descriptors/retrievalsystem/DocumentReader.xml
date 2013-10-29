@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
   <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
   <primitive>true</primitive>
   <annotatorImplementationName>edu.cmu.lti.f13.hw4.hw4_junginl.collectionreaders.DocumentReader</annotatorImplementationName>
   <analysisEngineMetaData>
     <name>DocumentReader</name>
-    <description/>
+    <description>Reads the input data.</description>
     <version>1.0</version>
-    <vendor/>
+    <vendor>CMU</vendor>
     <configurationParameters/>
     <configurationParameterSettings/>
     <typeSystemDescription>
@@ -20,7 +21,11 @@
     <capabilities>
       <capability>
         <inputs/>
-        <outputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">uima.tcas.DocumentAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.cas.AnnotationBase</type>
+          <type allAnnotatorFeatures="true">uima.tcas.Annotation</type>
+        </outputs>
         <languagesSupported/>
       </capability>
     </capabilities>
