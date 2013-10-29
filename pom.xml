@@ -105,4 +105,9 @@
 			</plugin>
 		</plugins>
 	</build>
+	<name>11-791-Fall2013-HW4</name>
+	<scm>
+		<connection>scm:git:git@github.com:junginl/hw4-junginl.git</connection>
+		<developerConnection>scm:git:git@github.com:junginl/hw4-junginl.git</developerConnection>
+	</scm>
 </project>
