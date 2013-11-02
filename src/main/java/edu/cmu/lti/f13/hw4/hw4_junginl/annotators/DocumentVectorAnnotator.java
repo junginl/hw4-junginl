@@ -19,6 +19,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 import edu.cmu.lti.f13.hw4.hw4_junginl.typesystems.Document;
 import edu.cmu.lti.f13.hw4.hw4_junginl.typesystems.Token;
+import edu.cmu.lti.f13.hw4.hw4_junginl.utils.Utils;
 
 /**
  * Identify the word and word frequency in each sentence. 
@@ -66,17 +67,17 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
 		}
 		
 		FSList tokensF = new FSList(jcas);
-//		tokensF.fromCollectionToFSList(jcas,tokensL);
-		FSArray tokensFa = new FSArray(jcas,tokensL.size());
-		Iterator<Token> iter = tokensL.iterator();
-    Token token2 = null;
-    int tokIndex = 0;
-    while (iter.hasNext()) {
-      token2 = iter.next();
-      tokensFa.set(tokIndex,token2);
-      tokIndex++;
-    }
-   
+		tokensF=Utils.fromCollectionToFSList(jcas,tokensL);
+//		FSArray tokensFa = new FSArray(jcas,tokensL.size());
+//		Iterator<Token> iter = tokensL.iterator();
+//    Token token2 = null;
+//    int tokIndex = 0;
+//    while (iter.hasNext()) {
+//      token2 = iter.next();
+//      tokensFa.set(tokIndex,token2);
+//      tokIndex++;
+//    }
+//   
 		doc.setTokenList(tokensF);
 		
 	}
