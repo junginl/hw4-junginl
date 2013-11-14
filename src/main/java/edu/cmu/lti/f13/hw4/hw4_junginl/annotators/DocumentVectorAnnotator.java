@@ -36,7 +36,7 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
 		if (iter.isValid()) {
 			iter.moveToNext();
 			Document doc = (Document) iter.get();
-			System.out.println(doc.getText());
+//			System.out.println(doc.getText());
 			createTermFreqVector(jcas, doc);
 		}
 
@@ -60,7 +60,7 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
 		List<Token> tokensL = new ArrayList<Token>();
 		Set<String> unique = new HashSet<String>(tokens);
 		for (String key : unique) {
-      Token token1 = null;
+      Token token1 = new Token(jcas);
 		  token1.setText(key);
 		  token1.setFrequency(Collections.frequency(tokens,key));
 		  tokensL.add(token1);
