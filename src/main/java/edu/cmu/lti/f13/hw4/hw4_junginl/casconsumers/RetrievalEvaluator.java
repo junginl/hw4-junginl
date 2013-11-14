@@ -115,7 +115,7 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 
 		super.collectionProcessComplete(arg0);
 		
-//		
+//
 //		String[] textAll = new String[textList.size()];
 //		for (int i=1; i<textList.size(); i++) {
 //		  textAll[i] = textList.get(i);
@@ -353,8 +353,6 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 	private double compute_mrr() {
 		// TODO :: compute Mean Reciprocal Rank (MRR) of the text collection
 		double mrr = 0.0;
-//		System.out.println(rankL.size());
-//		System.out.println(rankL);
 		for (int i=0; i<rankL.size(); i++) {
       mrr += 1.0 / rankL.get(i);
     }
