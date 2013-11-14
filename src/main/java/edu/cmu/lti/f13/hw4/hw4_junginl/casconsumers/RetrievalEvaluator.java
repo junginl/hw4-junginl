@@ -205,10 +205,9 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
           Map<String,Integer> docVector = mapA;
         
           //compute the cosine similarity
-          double score = computeCosineSimilarity(queryVector, docVector);
-          double scoretemp = computeCosineSimilarity(queryVector, queryVector);
-//          System.out.println(queryVector.keySet());
-//          System.out.println("scoretemp=" + scoretemp);
+//          double score = computeCosineSimilarity(queryVector, docVector);
+//          double score = computeJaccard(queryVector, docVector);
+          double score = computeDice(queryVector, docVector);
           scoreL.add(score);
         }
       }
